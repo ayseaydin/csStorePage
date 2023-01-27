@@ -101,19 +101,16 @@ public class StorePage {
     }
 
     public static void Temizle(){
-      //  waitFor(10);
         elementHelper.click(filterDelete);
     }
 
     public static void urlkontrol(){
-        waitFor(10);
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.ciceksepeti.com/tum-urunler?storeid=30180","Not matched");
     }
 
     public static void pagescroll(){
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 7000);");
-        waitFor(10);
     }
         public static void pageurlcontrol() {
             Assert.assertEquals(driver.getCurrentUrl(), "https://www.ciceksepeti.com/tum-urunler?storeid=30180&page=2","Not matched");
